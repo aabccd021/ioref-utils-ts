@@ -1,3 +1,5 @@
-import * as ioRefUtil from './io_ref_util';
+import * as ioRefUtil from './io';
+import * as taskRefUtil from './task';
 
 export { ioRefUtil };
+export { taskRefUtil };
