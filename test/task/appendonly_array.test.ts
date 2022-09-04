@@ -14,7 +14,7 @@ const tests: Tests = {
     ),
     toEqual: [],
   }),
-  'append and read returns appended element': pass({
+  'append and read returns appended elements': pass({
     expect: pipe(
       task.Do,
       task.bind('arr', appendonlyArray),
