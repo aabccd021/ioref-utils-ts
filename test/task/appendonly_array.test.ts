@@ -1,12 +1,12 @@
 import { task } from 'fp-ts';
 import { pipe } from 'fp-ts/function';
-import { executeTests, itExpect, Tests } from 'unit-test-ts';
+import { executeTests, expect, Tests } from 'unit-test-ts';
 import * as vitest from 'vitest';
 
 import { appendonlyArray } from '../../src/task/appendonly_array';
 
 const tests: Tests = {
-  'initial state is an empty array': itExpect({
+  'initial state is an empty array': expect({
     task: pipe(
       task.Do,
       task.bind('arr', appendonlyArray),
@@ -14,7 +14,7 @@ const tests: Tests = {
     ),
     toEqual: [],
   }),
-  'append and read returns appended elements': itExpect({
+  'append and read returns appended elements': expect({
     task: pipe(
       task.Do,
       task.bind('arr', appendonlyArray),
